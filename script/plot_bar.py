@@ -17,7 +17,7 @@ mean_outlier = 50
 try:
     data = pd.read_csv(f"../ufs-weather-model/{app}-prtime.csv")
 except:
-    print(f"Invalid app or .csv dataset not available for 'f{app}'")
+    print(f"Invalid app or .csv dataset not available for '{app}'")
     exit(1)
 
 df = pd.DataFrame(data)
@@ -40,7 +40,7 @@ tick_spacing = 3
 ax.xaxis.set_major_locator(ticker.MultipleLocator(tick_spacing))
 ax.yaxis.set_major_locator(ticker.MultipleLocator(10))
 # Show the plot
-ax.invert_xaxis()
+# ax.invert_xaxis()
 plt.title(f"{app.upper()} PR Turnaround Time")
 plt.xlabel("Pull Requests")
 plt.ylabel("Days")
