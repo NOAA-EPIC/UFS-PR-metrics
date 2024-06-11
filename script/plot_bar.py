@@ -36,9 +36,9 @@ plt.text(20, y_.max(), f"Mean = {y_mean:.2f} days", fontsize=8)
 ax.set_xticks(x)
 # Set ticks labels for x-axis
 ax.set_xticklabels(pr, rotation=60, fontsize=6)
-tick_spacing = 3
+tick_spacing = 10
 ax.xaxis.set_major_locator(ticker.MultipleLocator(tick_spacing))
-ax.yaxis.set_major_locator(ticker.MultipleLocator(10))
+ax.yaxis.set_major_locator(ticker.MultipleLocator(15))
 # Show the plot
 # ax.invert_xaxis()
 plt.title(f"{app.upper()} PR Turnaround Time")
